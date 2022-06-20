@@ -2,17 +2,12 @@
 from operator import truediv
 from typing import List
 
-class solutin:
-    def twoSum(self, nums: List[int], target: int) -> List[int]:
-        nums.sort()
-        left =0 
-        right = len(nums)-1
-        while(left<=right):
-            tmp = nums[left] + nums[right]
-            if(tmp == target):
-                return [left,right]
-            elif(tmp < target):
-                left = left +1
-            elif (tmp > target):
-                right = right -1
+class solution:
+    def twoSum(nums: List[int], target: int) -> List[int]:
+        dict = {}
+        for i, n in enumerate(nums):
+            dp = target - n
+            if dp in dict:
+                return [dict[dp], i]
+            dict[n] = i
         return [-1,-1]
