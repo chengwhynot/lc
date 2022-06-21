@@ -1,5 +1,4 @@
 #!/usr/bin/env/ python3
-from operator import truediv
 from typing import List
 
 class solution:
